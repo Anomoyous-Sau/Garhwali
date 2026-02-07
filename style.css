@@ -1,0 +1,128 @@
+:root {
+  --bg: #0f0f0f;
+  --text: #ffffff;
+  --card: #1e1e1e;
+  --accent: #95d5b2;
+}
+
+body.light {
+  --bg: #f5f5f5;
+  --text: #111;
+  --card: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  z-index: 10;
+}
+
+/* HERO */
+#hero {
+  height: 100vh;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #081c15, #1b4332);
+}
+
+#hero span {
+  color: var(--accent);
+}
+
+#hero button {
+  margin-top: 24px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+/* FOOD GRID */
+#foods {
+  padding: 100px 20px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 10px;
+}
+
+.hi { display: none; }
+
+/* DETAIL PANEL */
+#detailPanel {
+  position: fixed;
+  top: 0;
+  right: -50%;
+  width: 50%;
+  height: 50%;
+  background: var(--card);
+  padding: 24px;
+  transition: 0.4s ease;
+  z-index: 20;
+}
+
+#detailPanel.active {
+  right: 0;
+}
+
+#closePanel {
+  float: right;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.panel-buttons {
+  margin: 20px 0;
+}
+
+.panel-buttons button {
+  margin-right: 10px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  opacity: 0.7;
+}
